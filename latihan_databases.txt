@@ -1,0 +1,8 @@
+Nomor 1
+
+Create database myshop;
+
+Nomor 2
+CREATE table categories (id int auto_increment, nama varchar(255), primary key(id));
+CREATE table users (id int auto_increment, name varchar(255),email varchar(255),password varchar(255), primary key(id));
+CREATE table items (id int auto_increment, name varchar(255),description varchar(255),price int(20),stock int(20), category_id int(20), primary key(id), FOREIGN KEY (category_id) REFERENCES categories(id));
